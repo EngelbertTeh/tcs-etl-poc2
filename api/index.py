@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from banking_data    import get_data
+from api.banking_data import get_data
 
 app = Flask(__name__)
 
