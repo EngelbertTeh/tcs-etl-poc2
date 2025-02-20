@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask
 from api.banking_data import get_data
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ data_list = get_data().to_dict(orient="records") # list
 
 @app.route('/')
 def home():
-    return jsonify(data_list)
+    return data_list
 
 @app.route('/about')
 def about():
