@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
-import data
+from data import get_data
 
 app = Flask(__name__)
 
-data_list = data.get_data().to_dict(orient="records") # list
+data_list = get_data().to_dict(orient="records") # list
 
 @app.route('/')
 def home():
@@ -15,5 +15,5 @@ def about():
 
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
