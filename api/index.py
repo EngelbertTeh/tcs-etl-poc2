@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from services.etl.extract import extract_stock_data
 from services.etl.transform import transform_data
-from services.etl.load import load_data
 from services.etl.visualize import visualize_data
 
 app = Flask(__name__)
