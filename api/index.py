@@ -21,8 +21,8 @@ def transformed():
 
 @app.route('/plot')
 def plot():
-    visualize_data(tdf)
-    return "CHART SHOWN. SAFE TO CLOSE TAB."
+    return visualize_data(tdf)
+    # return "CHART SHOWN. SAFE TO CLOSE TAB."
 
 
 
